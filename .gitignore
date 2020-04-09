@@ -1,0 +1,6 @@
+
+slprj/accel/PMSM_Drive_custom_pwm/tmwinternal/
+
+*.slxc
+
+slprj/sim/varcache/PWM_PI/tmwinternal/
