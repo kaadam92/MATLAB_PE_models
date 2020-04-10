@@ -4,3 +4,15 @@ slprj/accel/PMSM_Drive_custom_pwm/tmwinternal/
 *.slxc
 
 slprj/sim/varcache/PWM_PI/tmwinternal/
+
+**/slprj/**
+**/*ert_rtw/**
+
+slprj/sim/varcache/PMSM_Drive_custom_pwm/checksumOfCache.mat
+
+slprj/sim/varcache/PMSM_Drive_custom_pwm/tmwinternal/simulink_cache.xml
+
+slprj/sim/varcache/PMSM_Drive_custom_pwm/varInfo.mat
+
+*.autosave
+*.original
