@@ -41,8 +41,8 @@ w_c = (2*pi)/(9*T_sw);
 Ti = 1/(w_c*tan(pi/18));
 Ap = w_c*Lq;
 
-Kp = Ap
-Ki = Ap/Ti
+Kp = Ap;
+Ki = Ap/Ti;
 
 %% Current controller Discrete
 
@@ -50,8 +50,23 @@ w_cd = (2*pi)/(9*T_sw);
 Tid = 1/(w_cd*tan(pi/18));
 Apd = w_cd*L;
 
-Kpd = Apd
-Kid = Apd/Tid
+Kpd = Apd;
+Kid = Apd/Tid;
+
+%% DHS PArameters
+
+C_dhs = 300e-6;
+L_dhs = 720e-6;
+
+f_sw_dhs = 10e3;
+T_sw_dhs = 1/f_sw_dhs;
 
 
+%% DHS Current_controller
+w_cd_i_dhs = (2*pi)/(9*T_sw_dhs);
+Tid_i_dhs = 1/(w_cd_i_dhs*tan(pi/18));
+Apd_i_dhs = w_cd_i_dhs*L_dhs;
+
+Kpd_i_dhs = Apd_i_dhs;
+Kid_i_dhs = Apd_i_dhs/Tid_i_dhs;
 

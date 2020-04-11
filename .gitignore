@@ -16,3 +16,5 @@ slprj/sim/varcache/PMSM_Drive_custom_pwm/varInfo.mat
 
 *.autosave
 *.original
+
+*.asv
