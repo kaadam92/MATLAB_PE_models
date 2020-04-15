@@ -10,6 +10,8 @@ X_Rr = 0.02;
 In_RMS = Pn / (sqrt(3)*Un_RMS);
 Zn = Un_RMS / (sqrt(3)*In_RMS);
 
+In = In_RMS;
+
 U = Un_RMS*sqrt(2);
 
 L = (X_Lr * Zn) / (2*pi*fn);
@@ -56,17 +58,27 @@ Kid = Apd/Tid;
 %% DHS PArameters
 
 C_dhs = 300e-6;
-L_dhs = 720e-6;
+L_dhs = (720e-6)/2;
 
 f_sw_dhs = 10e3;
 T_sw_dhs = 1/f_sw_dhs;
 
 
 %% DHS Current_controller
-w_cd_i_dhs = (2*pi)/(9*T_sw_dhs);
+w_cd_i_dhs = (2*pi)/(18*T_sw_dhs);
 Tid_i_dhs = 1/(w_cd_i_dhs*tan(pi/18));
 Apd_i_dhs = w_cd_i_dhs*L_dhs;
 
 Kpd_i_dhs = Apd_i_dhs;
-Kid_i_dhs = Apd_i_dhs/Tid_i_dhs;
+Kid_i_dhs = (Apd_i_dhs/Tid_i_dhs)*T_sw_dhs;
 
+f_LC = 1/(2*pi*sqrt(L_dhs*C_dhs))
+
+%% DHS Voltage Control
+
+w_cd_u_dhs = (pi)/(18*T_sw_dhs);
+Tid_u_dhs = 1/(w_cd_u_dhs*tan(pi/18));
+Apd_u_dhs = w_cd_u_dhs*C_dhs;
+
+Kpd_u_dhs = Apd_u_dhs;
+Kid_u_dhs = (Apd_u_dhs/Tid_u_dhs)*T_sw_dhs;
