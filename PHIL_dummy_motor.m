@@ -1,3 +1,11 @@
+%% Initialisation
+clc;
+clear;
+
+addpath .\Libs
+addpath .\PE_Converters
+addpath .\PE_Example
+
 %% Motor parameters for P-HIL
 
 Pn = 90000;
@@ -18,6 +26,7 @@ L = (X_Lr * Zn) / (2*pi*fn);
 
 Ld = L;
 Lq = L;
+L_drom = L;
 
 Rs = (X_Rr * Zn);
 
