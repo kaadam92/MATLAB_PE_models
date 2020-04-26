@@ -91,3 +91,14 @@ Apd_u_dhs = w_cd_u_dhs*C_dhs;
 
 Kpd_u_dhs = Apd_u_dhs;
 Kid_u_dhs = (Apd_u_dhs/Tid_u_dhs)*T_sw_dhs;
+
+%% Speed Controller
+
+T_Mech=T_start;
+
+w_cd_speed = 5e2;
+Tid_speed = 1/(w_cd_speed*tan(pi/18));
+Apd_speed = w_cd_speed*T_Mech;
+
+Kpd_speed = Apd_speed;
+Kid_speed = (Apd_speed/Tid_speed)*T_sw;
