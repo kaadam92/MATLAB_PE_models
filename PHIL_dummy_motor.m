@@ -69,7 +69,7 @@ Kid = Apd/Tid;
 C_dhs = 300e-6;
 L_dhs = (720e-6)/2;
 
-f_sw_dhs = 10e3;
+f_sw_dhs = 20e3;
 T_sw_dhs = 1/f_sw_dhs;
 
 
